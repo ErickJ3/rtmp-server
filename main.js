@@ -1,3 +1,4 @@
+require("dotenv").config();
 const NodeMediaServer = require("node-media-server");
 
 const config = {
@@ -11,7 +12,7 @@ const config = {
     ping_timeout: 60,
   },
   http: {
-    port: 80,
+    port: process.env.PORT,
     allow_origin: "*",
   },
 };
