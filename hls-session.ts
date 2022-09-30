@@ -113,7 +113,7 @@ export class NodeTransSession extends EventEmitter {
         stream_key: this.conf.streamNameRTMP,
       });
 
-      fs.readdir(ouPath, function (err, files) {
+      fs.readdir(ouPath, (err, files) => {
         if (!err) {
           files.forEach((filename) => {
             if (
